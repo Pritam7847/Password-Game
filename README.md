@@ -1,12 +1,43 @@
-# React + Vite
+# 🔐 The Password Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive web-based game where players are challenged to create passwords based on dynamic and quirky rules! Built using React.js and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🧠 Game Concept
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Players must create a password that passes through multiple validation checks:
+- Avoid certain letters or characters
+- Include specific elements (e.g., numbers, symbols)
+- Pass all conditions as levels increase
 
-## Expanding the ESLint configuration
+Each rule adds complexity to test your creativity and knowledge of secure passwords.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- ⚙️ Real-time password validation
+- 🎮 Multiple challenges and levels
+- 💡 Visual feedback for passed/failed rules
+- 🧩 Custom validation logic for each challenge
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel (or any static hosting platform)
+
+---
+
+## 📤 Deployment
+
+The project is deployed on Vercel.
+
+### 🔗 Live Demo: [Click here to play The Password Game] : ( https://password-game-self-ten.vercel.app/ )
+
+---
+
+## 👨‍💻 Author
+
+- **Pritam Anand** — [GitHub Profile](https://github.com/Pritam7847)
