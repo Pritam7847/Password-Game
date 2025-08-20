@@ -108,29 +108,36 @@ export default function App() {
   }, [password, rules]);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-between bg-slate-900 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-between bg-gradient-to-br from-purple-900 via-black to-gray-900 text-white overflow-hidden p-4">
       {/* Aurora Blobs */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute top-0 -right-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute -bottom-40 left-20 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute -top-40 -left-40 w-72 sm:w-96 h-72 sm:h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute top-0 -right-40 w-72 sm:w-96 h-72 sm:h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute -bottom-40 left-20 w-72 sm:w-96 h-72 sm:h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
 
       {/* Game Card */}
-      <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl flex flex-col items-center shadow-2xl w-[28rem] mt-14">
-        <h1 className="text-3xl font-bold text-white mb-6">🧠 The Password Game</h1>
+      <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 
+        p-6 sm:p-8 rounded-2xl flex flex-col items-center shadow-2xl 
+        w-full max-w-md mt-14">
+
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
+          🧠 The Password Game
+        </h1>
 
         <input
           type="text"
           placeholder="Enter your password..."
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border border-white/30 bg-white/20 text-white placeholder-gray-300 rounded px-4 py-2 w-full mb-4 focus:outline-none focus:border-pink-400"
+          className="border border-white/30 bg-white/20 text-white placeholder-gray-300 
+            rounded px-3 sm:px-4 py-2 w-full mb-4 focus:outline-none focus:border-pink-400 
+            text-sm sm:text-base"
         />
 
         <ul className="text-left space-y-3 w-full">
           {rules.slice(0, solvedRulesCount + 1).map((rule) => (
             <li
               key={rule.id}
-              className={`p-2 rounded-lg transition duration-500 ${
+              className={`p-2 sm:p-3 rounded-lg transition duration-500 text-xs sm:text-sm ${
                 rule.check(password)
                   ? "bg-green-500/20 text-green-300 border border-green-400/30"
                   : "bg-red-500/20 text-red-300 border border-red-400/30"
@@ -142,15 +149,17 @@ export default function App() {
         </ul>
 
         {solvedRulesCount === rules.length && (
-          <p className="mt-6 text-green-300 font-semibold animate-bounce">
+          <p className="mt-6 text-green-300 font-semibold animate-bounce text-sm sm:text-base text-center">
             🎉 You cracked all the rules!
           </p>
         )}
       </div>
 
       {/* Footer */}
-      <footer className="relative w-full flex justify-center mt-10 z-10">
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 w-full max-w-md shadow-md rounded-md py-4 px-4 text-center text-sm text-gray-200">
+      <footer className="relative w-full flex justify-center mt-10 z-10 px-4">
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 
+          w-full max-w-md shadow-md rounded-md py-3 sm:py-4 px-3 sm:px-4 
+          text-center text-xs sm:text-sm text-gray-200">
           Made with ❤️ by{" "}
           <span className="font-semibold text-yellow-300">Pritam Anand</span> <br />
           Inspired from the Trend (17-07-2025)
